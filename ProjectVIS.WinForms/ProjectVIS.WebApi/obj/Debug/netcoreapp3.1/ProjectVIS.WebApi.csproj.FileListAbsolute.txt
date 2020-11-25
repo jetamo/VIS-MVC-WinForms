@@ -1,0 +1,7 @@
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\ProjectVIS.WebApi\obj\Debug\netcoreapp3.1\ProjectVIS.WebApi.csprojAssemblyReference.cache
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\ProjectVIS.WebApi\obj\Debug\netcoreapp3.1\ProjectVIS.WebApi.AssemblyInfoInputs.cache
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\ProjectVIS.WebApi\obj\Debug\netcoreapp3.1\ProjectVIS.WebApi.AssemblyInfo.cs
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\ProjectVIS.WebApi\obj\Debug\netcoreapp3.1\ProjectVIS.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\ProjectVIS.WebApi\obj\Debug\netcoreapp3.1\ProjectVIS.WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\ProjectVIS.WebApi\obj\Debug\netcoreapp3.1\ProjectVIS.WebApi.dll
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\ProjectVIS.WebApi\obj\Debug\netcoreapp3.1\ProjectVIS.WebApi.pdb

@@ -1,0 +1,9 @@
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb

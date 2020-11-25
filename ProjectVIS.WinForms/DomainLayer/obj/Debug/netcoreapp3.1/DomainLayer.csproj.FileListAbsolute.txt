@@ -1,0 +1,12 @@
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.csprojAssemblyReference.cache
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.AssemblyInfoInputs.cache
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.AssemblyInfo.cs
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.csproj.CoreCompileInputs.cache
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\bin\Debug\netcoreapp3.1\DomainLayer.deps.json
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\bin\Debug\netcoreapp3.1\DomainLayer.dll
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\bin\Debug\netcoreapp3.1\DomainLayer.pdb
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.csproj.CopyComplete
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.dll
+C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.pdb
