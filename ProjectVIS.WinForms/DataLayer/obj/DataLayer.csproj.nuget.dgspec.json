@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jetam\\source\\repos\\ProjectVIS.WinForms\\DataLayer\\DataLayer.csproj": {}
+    "C:\\dev\\volavka\\ProjectVIS.WinForms\\DataLayer\\DataLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jetam\\source\\repos\\ProjectVIS.WinForms\\DataLayer\\DataLayer.csproj": {
+    "C:\\dev\\volavka\\ProjectVIS.WinForms\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jetam\\source\\repos\\ProjectVIS.WinForms\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\dev\\volavka\\ProjectVIS.WinForms\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\jetam\\source\\repos\\ProjectVIS.WinForms\\DataLayer\\DataLayer.csproj",
+        "projectPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\DataLayer\\DataLayer.csproj",
         "packagesPath": "C:\\Users\\jetam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jetam\\source\\repos\\ProjectVIS.WinForms\\DataLayer\\obj\\",
+        "outputPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

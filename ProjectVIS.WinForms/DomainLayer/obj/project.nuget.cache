@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G6cY1D0CBrCd2bFzXipCiZ8AAK+e4gJi/ez5ZCgszExyCM38DRZfSWb60jc0QJ9Jm3drF7DVFonl4tlSZTHZ0g==",
+  "dgSpecHash": "BrqnoVKBK5u5xwZs/LKMEIRQUMy2EvSOaUy4Ulm9NjRtUqsGbczAPwXIH+s2GU4geXw6sh5YwCPNjbTqpZD0Tw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jetam\\source\\repos\\ProjectVIS.WinForms\\DomainLayer\\DomainLayer.csproj",
+  "projectFilePath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\DomainLayer\\DomainLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jetam\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\jetam\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

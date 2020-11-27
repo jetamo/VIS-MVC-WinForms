@@ -2,21 +2,69 @@
 using DataLayer.TableDataGateWay;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Text;
 
 namespace DomainLayer.TableModule
 {
-    public class BookModule
+    public class BookActiveRecord
     {
-        public void AddBook(AuthorDTO _author, string _title, string _genres, int _year, int _available)
+        public int? ID { get; set; }
+        public AuthorActiveRecord Author { get; set; }
+        public string Title { get; set; }
+        public string Genre { get; set; }
+
+        public BookActiveRecord(int _id, AuthorActiveRecord _author, string _title, string _genre)
+        {
+            ID = _id;
+            Author = _author;
+            Title = _title;
+            Genre = _genre;
+        }
+        public BookActiveRecord(AuthorActiveRecord _author, string _title, string _genre)
+        {
+            ID = null;
+            Author = _author;
+            Title = _title;
+            Genre = _genre;
+        }
+        public BookActiveRecord()
+        {
+            ID = null;
+            Author = null;
+            Title = null;
+            Genre = null;
+        }
+
+        public static List<BookActiveRecord> Find()
+        {
+            List<BookActiveRecord> booksList = new List<BookActiveRecord>();
+
+            var bookGateWay = new BookTDG();
+            DataTable dt = bookGateWay.Find();
+            foreach (DataRow dr in dt.Rows)
+                booksList.Add(MapResultsetToObject(dr));
+            
+            return booksList;
+        }
+        
+        public void Save()
         {
             var bookGateWay = new BookTDG();
-            bookGateWay.Insert(new BookDTO(_author, _title, _genres, _year, _available));
+            bookGateWay.Insert((int)this.Author.ID, this.Title, this.Genre);
         }
-        public void AddAuthor(string _name, string _surname)
+
+        public static BookActiveRecord MapResultsetToObject(DataRow dr)
         {
-            var bookGateWay = new AuthorTDG();
-            bookGateWay.Insert(new AuthorDTO(_name, _surname));
+            BookActiveRecord NewBook = new BookActiveRecord();
+            var authorTemp = new AuthorTDG();
+            NewBook.ID = Convert.ToInt32(dr.ItemArray[0].ToString());
+            NewBook.Author = AuthorActiveRecord.MapResultsetToObject(authorTemp.GetAuthorByID(Convert.ToInt32(dr.ItemArray[1].ToString())).Rows[0]);
+            NewBook.Title = dr.ItemArray[2].ToString();
+            NewBook.Genre = dr.ItemArray[3].ToString();
+
+            return NewBook;
         }
     }
 }

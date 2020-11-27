@@ -20,8 +20,9 @@ namespace ProjectVIS.WinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            BookModule knihochlap = new BookModule();
-            knihochlap.AddAuthor("Robert", "Jordan");
+            List<AuthorActiveRecord> knihochlapi = AuthorActiveRecord.Find();
+            List<BookActiveRecord> knihoknihy = BookActiveRecord.Find();
+            ;
         }
 
         private void Form1_Load(object sender, EventArgs e)

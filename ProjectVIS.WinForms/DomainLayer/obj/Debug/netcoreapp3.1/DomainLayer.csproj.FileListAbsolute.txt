@@ -10,3 +10,15 @@ C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\bin\Debug\netcoreapp
 C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.csproj.CopyComplete
 C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.dll
 C:\Users\jetam\source\repos\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.pdb
+C:\dev\volavka\ProjectVIS.WinForms\DomainLayer\bin\Debug\netcoreapp3.1\DomainLayer.deps.json
+C:\dev\volavka\ProjectVIS.WinForms\DomainLayer\bin\Debug\netcoreapp3.1\DomainLayer.dll
+C:\dev\volavka\ProjectVIS.WinForms\DomainLayer\bin\Debug\netcoreapp3.1\DomainLayer.pdb
+C:\dev\volavka\ProjectVIS.WinForms\DomainLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\dev\volavka\ProjectVIS.WinForms\DomainLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\dev\volavka\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.csprojAssemblyReference.cache
+C:\dev\volavka\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.AssemblyInfoInputs.cache
+C:\dev\volavka\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.AssemblyInfo.cs
+C:\dev\volavka\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.csproj.CoreCompileInputs.cache
+C:\dev\volavka\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.csproj.CopyComplete
+C:\dev\volavka\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.dll
+C:\dev\volavka\ProjectVIS.WinForms\DomainLayer\obj\Debug\netcoreapp3.1\DomainLayer.pdb

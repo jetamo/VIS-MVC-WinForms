@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JoyivJn6G7xaIqo/xs9fxHx+OYPwl/wTduy5Tu3QnSD8CXwOKbPAsQ6hsjnHn16j6+zY77k18serGcv9xChyMA==",
+  "dgSpecHash": "rDJ7BWD36uRDEgTapVKX78h6q6XltXpfzz1pngahiIx2HwyxV5c3mvc82YiJCIGMEJWnA2zvvE6hAWeSW30Zwg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jetam\\source\\repos\\ProjectVIS.WinForms\\ProjectVIS.WebApi\\ProjectVIS.WebApi.csproj",
+  "projectFilePath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\ProjectVIS.WebApi\\ProjectVIS.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jetam\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\jetam\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

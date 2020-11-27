@@ -494,11 +494,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jetam\\source\\repos\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\ProjectVIS.WinForms.csproj",
+      "projectUniqueName": "C:\\dev\\volavka\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\ProjectVIS.WinForms.csproj",
       "projectName": "ProjectVIS.WinForms",
-      "projectPath": "C:\\Users\\jetam\\source\\repos\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\ProjectVIS.WinForms.csproj",
+      "projectPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\ProjectVIS.WinForms.csproj",
       "packagesPath": "C:\\Users\\jetam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jetam\\source\\repos\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\obj\\",
+      "outputPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -518,8 +518,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\jetam\\source\\repos\\ProjectVIS.WinForms\\DomainLayer\\DomainLayer.csproj": {
-              "projectPath": "C:\\Users\\jetam\\source\\repos\\ProjectVIS.WinForms\\DomainLayer\\DomainLayer.csproj"
+            "C:\\dev\\volavka\\ProjectVIS.WinForms\\DomainLayer\\DomainLayer.csproj": {
+              "projectPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\DomainLayer\\DomainLayer.csproj"
             }
           }
         }
