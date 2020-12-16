@@ -59,7 +59,36 @@ namespace DataLayer.TableDataGateWay
             return dt;
         }
 
-        public bool Insert(string _name, string _surname)
+        public int GetLastID()
+        {
+            DataTable dt = new DataTable();
+            SqlConnectionStringBuilder builder = DBConnector.GetBuilder();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                {
+                    connection.Open();
+
+                    string sql = "SELECT TOP 1 a.id_autor FROM autor a ORDER BY a.id_autor DESC";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            dt.Load(reader);
+                        }
+                    }
+                }
+
+                return Convert.ToInt32(dt.Rows[0][0].ToString());
+            }
+
+            catch 
+            {
+                return -1;
+            }
+        }
+
+        public int Insert(string _name, string _surname)
         {
             try
             {
@@ -84,9 +113,9 @@ namespace DataLayer.TableDataGateWay
             }
             catch
             {
-                return false;
+                return -1;
             }
-            return true;
+            return GetLastID();
         }
     }
 }

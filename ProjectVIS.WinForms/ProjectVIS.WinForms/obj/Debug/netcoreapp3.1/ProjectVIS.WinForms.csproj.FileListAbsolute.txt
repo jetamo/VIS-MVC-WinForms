@@ -50,3 +50,4 @@ C:\dev\volavka\ProjectVIS.WinForms\ProjectVIS.WinForms\obj\Debug\netcoreapp3.1\P
 C:\dev\volavka\ProjectVIS.WinForms\ProjectVIS.WinForms\obj\Debug\netcoreapp3.1\ProjectVIS.WinForms.dll
 C:\dev\volavka\ProjectVIS.WinForms\ProjectVIS.WinForms\obj\Debug\netcoreapp3.1\ProjectVIS.WinForms.pdb
 C:\dev\volavka\ProjectVIS.WinForms\ProjectVIS.WinForms\obj\Debug\netcoreapp3.1\ProjectVIS.WinForms.genruntimeconfig.cache
+C:\dev\volavka\ProjectVIS.WinForms\ProjectVIS.WinForms\obj\Debug\netcoreapp3.1\ProjectVIS.WinForms.AddBook.resources

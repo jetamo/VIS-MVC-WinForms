@@ -9,10 +9,30 @@ namespace DataLayer.TableDataGateWay
 {
     public class BookTDG
     {
-        public string GetBookByID(int id)
+        public DataTable GetBookByID(int _id)
         {
-            //return new BookDTO();
-            return null; //temp
+            DataTable dt = new DataTable();
+            SqlConnectionStringBuilder builder = DBConnector.GetBuilder();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                {
+                    connection.Open();
+
+                    string sql = "SELECT * FROM Kniha k WHERE k.id_kniha = @p_id_kniha";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@p_id_kniha", _id);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            dt.Load(reader);
+                        }
+                    }
+                }
+            }
+
+            catch { }
+            return dt;
         }
 
         public DataTable Find()
@@ -39,8 +59,36 @@ namespace DataLayer.TableDataGateWay
             catch { }
             return dt;
         }
+        public int GetLastID()
+        {
+            DataTable dt = new DataTable();
+            SqlConnectionStringBuilder builder = DBConnector.GetBuilder();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                {
+                    connection.Open();
 
-        public bool Insert(int _idAuthor, string _title, string _genre)
+                    string sql = "SELECT TOP 1 k.id_kniha FROM kniha k ORDER BY k.id_kniha DESC";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            dt.Load(reader);
+                        }
+                    }
+                }
+
+                return Convert.ToInt32(dt.Rows[0][0].ToString());
+            }
+
+            catch
+            {
+                return -1;
+            }
+        }
+
+        public int Insert(int _idAuthor, string _title, string _genre)
         {
             try
             {
@@ -63,12 +111,12 @@ namespace DataLayer.TableDataGateWay
                         command.ExecuteScalar();
                     }
                 }
+                return GetLastID();
             }
             catch
             {
-                return false;
+                return -1;
             }
-            return true;
         }
     }
 }

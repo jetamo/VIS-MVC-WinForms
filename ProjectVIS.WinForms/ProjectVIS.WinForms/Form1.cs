@@ -20,9 +20,12 @@ namespace ProjectVIS.WinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<AuthorActiveRecord> knihochlapi = AuthorActiveRecord.Find();
-            List<BookActiveRecord> knihoknihy = BookActiveRecord.Find();
-            ;
+            List<BookActiveRecord> knihy = BookActiveRecord.Find();
+            List<LibrarianActiveRecord> knihovnici = LibrarianActiveRecord.Find();
+            List<CustomerActiveRecord> zakaznici = CustomerActiveRecord.Find();
+            List<RentalActiveRecord> vypujcky = RentalActiveRecord.Find();
+            List<BookInRentalActiveRecord> knihyVeVypujce = BookInRentalActiveRecord.Find();
+            List<AuthorActiveRecord> autori = AuthorActiveRecord.Find();
         }
 
         private void Form1_Load(object sender, EventArgs e)

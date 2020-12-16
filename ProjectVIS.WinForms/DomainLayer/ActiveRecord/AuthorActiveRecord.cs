@@ -48,17 +48,18 @@ namespace DomainLayer.TableModule
         public void Save()
         {
             var bookGateWay = new AuthorTDG();
-            bookGateWay.Insert(this.Name, this.Surname);
+            int tmpId = bookGateWay.Insert(this.Name, this.Surname);
+            ID = tmpId;
         }
 
         public static AuthorActiveRecord MapResultsetToObject(DataRow dr)
         {
-            AuthorActiveRecord NewCustomer = new AuthorActiveRecord();
-            NewCustomer.ID = Convert.ToInt32(dr.ItemArray[0].ToString());
-            NewCustomer.Name = dr.ItemArray[1].ToString();
-            NewCustomer.Surname = dr.ItemArray[2].ToString();
+            AuthorActiveRecord NewAuthor = new AuthorActiveRecord();
+            NewAuthor.ID = Convert.ToInt32(dr.ItemArray[0].ToString());
+            NewAuthor.Name = dr.ItemArray[1].ToString();
+            NewAuthor.Surname = dr.ItemArray[2].ToString();
 
-            return NewCustomer;
+            return NewAuthor;
         }
     }
 }

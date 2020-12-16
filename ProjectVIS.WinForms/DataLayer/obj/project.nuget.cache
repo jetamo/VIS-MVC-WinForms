@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "T8SEj/bQvJbe9HX742x43dnh6211hvLIeEFRGTCxwcQAb8EYjq6ekfHu6yAgjknQpB/mlPknY/EW6CLpKZ+JKQ==",
+  "dgSpecHash": "zm+qXleIJ0HeT7PvWMyILPM92M9VQWfz9kKCoeKa84+X/JQ5tTt5RqIiIxP/5rgXyQpeZn0lNtFJ0RWQodQU1Q==",
   "success": true,
   "projectFilePath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\DataLayer\\DataLayer.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\jetam\\.nuget\\packages\\system.data.sqlclient\\4.8.2\\system.data.sqlclient.4.8.2.nupkg.sha512",
     "C:\\Users\\jetam\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\jetam\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+    "C:\\Users\\jetam\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\jetam\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

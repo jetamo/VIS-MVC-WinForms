@@ -52,7 +52,8 @@ namespace DomainLayer.TableModule
         public void Save()
         {
             var bookGateWay = new BookTDG();
-            bookGateWay.Insert((int)this.Author.ID, this.Title, this.Genre);
+            int tmpId = bookGateWay.Insert((int)this.Author.ID, this.Title, this.Genre);
+            ID = tmpId;
         }
 
         public static BookActiveRecord MapResultsetToObject(DataRow dr)
