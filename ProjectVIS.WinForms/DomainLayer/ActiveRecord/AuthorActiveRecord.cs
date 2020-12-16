@@ -6,13 +6,18 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace DomainLayer.TableModule
+namespace DomainLayer.ActiveRecord
 {
     public class AuthorActiveRecord
     {
         public int? ID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
+
+        public override string ToString()
+        {
+            return Name + " " + Surname;
+        }
 
         public AuthorActiveRecord(int _id, string _name, string _surname)
         {

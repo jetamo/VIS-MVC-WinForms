@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DomainLayer.TableModule;
+using DomainLayer.ActiveRecord;
 
 namespace ProjectVIS.WinForms
 {
@@ -26,11 +26,24 @@ namespace ProjectVIS.WinForms
             List<RentalActiveRecord> vypujcky = RentalActiveRecord.Find();
             List<BookInRentalActiveRecord> knihyVeVypujce = BookInRentalActiveRecord.Find();
             List<AuthorActiveRecord> autori = AuthorActiveRecord.Find();
+
+            AddBook addBookForm = new AddBook(this);
+
+            addBookForm.Show();
+            this.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddRental addRentalForm = new AddRental(this);
+
+            addRentalForm.Show();
+            this.Hide();
         }
     }
 }

@@ -98,21 +98,21 @@ namespace DataLayer.TableDataGateWay
                     connection.Open();
                     StringBuilder sb = new StringBuilder();
                     sb.Clear();
-                    sb.Append("INSERT INTO KnihaVevypujcce");
+                    sb.Append("INSERT INTO KnihaVevypujcce ");
                     sb.Append("VALUES (@p_id_kniha, @p_id_vypujcka);");
 
 
                     string sql = sb.ToString();
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        command.Parameters.AddWithValue("@p_id_knihovnik", _id_kniha);
-                        command.Parameters.AddWithValue("@p_id_zakaznik", _id_vypujcka);
+                        command.Parameters.AddWithValue("@p_id_kniha", _id_kniha);
+                        command.Parameters.AddWithValue("@p_id_vypujcka", _id_vypujcka);
                         command.ExecuteScalar();
                     }
                 }
                 return GetLastID();
             }
-            catch
+            catch(Exception e)
             {
                 return -1;
             }

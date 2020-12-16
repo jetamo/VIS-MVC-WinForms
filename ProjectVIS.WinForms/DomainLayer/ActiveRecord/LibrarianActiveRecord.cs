@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace DomainLayer.TableModule
+namespace DomainLayer.ActiveRecord
 {
     public class LibrarianActiveRecord
     {
@@ -14,6 +14,11 @@ namespace DomainLayer.TableModule
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Email { get; set; }
+
+        public override string ToString()
+        {
+            return Name + " " + Surname;
+        }
 
         public LibrarianActiveRecord(int _id, string _name, string _surname, string _email)
         {

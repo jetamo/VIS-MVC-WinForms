@@ -107,14 +107,17 @@ namespace DataLayer.TableDataGateWay
                         command.Parameters.AddWithValue("@p_id_knihovnik", _id_knihovnik);
                         command.Parameters.AddWithValue("@p_id_zakaznik", _id_zakaznik);
                         command.Parameters.AddWithValue("@p_datum_zapujceni", _datum_zapujceni);
-                        command.Parameters.AddWithValue("@p_datum_vraceni", _datum_vraceni);
+                        if(_datum_vraceni == null)
+                            command.Parameters.AddWithValue("@p_datum_vraceni", DBNull.Value);
+                        else
+                            command.Parameters.AddWithValue("@p_datum_vraceni", _datum_vraceni);
                         command.Parameters.AddWithValue("@p_vraceno", _vraceno);
                         command.ExecuteScalar();
                     }
                 }
                 return GetLastID();
             }
-            catch
+            catch(Exception e)
             {
                 return -1;
             }

@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace DomainLayer.TableModule
+namespace DomainLayer.ActiveRecord
 {
     public class BookInRentalActiveRecord
     {
@@ -48,7 +48,8 @@ namespace DomainLayer.TableModule
         public void Save()
         {
             var bookInRentalGateWay = new BookInRentalTDG();
-            bookInRentalGateWay.Insert((int)this.Book.ID, (int)this.Rental.ID);
+            int tmpId = bookInRentalGateWay.Insert((int)this.Book.ID, (int)this.Rental.ID);
+            ID = tmpId;
         }
 
         public static BookInRentalActiveRecord MapResultsetToObject(DataRow dr)

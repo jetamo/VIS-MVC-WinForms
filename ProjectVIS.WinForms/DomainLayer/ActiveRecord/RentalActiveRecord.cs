@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace DomainLayer.TableModule
+namespace DomainLayer.ActiveRecord
 {
     public class RentalActiveRecord
     {
@@ -17,7 +17,7 @@ namespace DomainLayer.TableModule
         public DateTime? ReturnDate { get; set; }
         bool Vraceno { get; set; }
 
-        public RentalActiveRecord(int _id, LibrarianActiveRecord _librarian, CustomerActiveRecord _customer, DateTime _rentalDate, DateTime _returnDate, bool _vraceno)
+        public RentalActiveRecord(int _id, LibrarianActiveRecord _librarian, CustomerActiveRecord _customer, DateTime _rentalDate, DateTime? _returnDate, bool _vraceno)
         {
             ID = _id;
             Librarian = _librarian;
@@ -26,7 +26,7 @@ namespace DomainLayer.TableModule
             ReturnDate = _returnDate;
             Vraceno = _vraceno;
         }
-        public RentalActiveRecord(LibrarianActiveRecord _librarian, CustomerActiveRecord _customer, DateTime _rentalDate, DateTime _returnDate, bool _vraceno)
+        public RentalActiveRecord(LibrarianActiveRecord _librarian, CustomerActiveRecord _customer, DateTime _rentalDate, DateTime? _returnDate, bool _vraceno)
         {
             ID = null;
             Librarian = _librarian;
@@ -60,7 +60,8 @@ namespace DomainLayer.TableModule
         public void Save()
         {
             var rentalGateWay = new RentalTDG();
-            rentalGateWay.Insert((int)this.Librarian.ID, (int)this.Customer.ID, RentalDate, ReturnDate, Vraceno);
+            int tmpId = rentalGateWay.Insert((int)this.Librarian.ID, (int)this.Customer.ID, RentalDate, ReturnDate, Vraceno);
+            ID = tmpId;
         }
 
         public static RentalActiveRecord MapResultsetToObject(DataRow dr)
