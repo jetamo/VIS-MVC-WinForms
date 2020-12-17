@@ -15,7 +15,12 @@ namespace DomainLayer.ActiveRecord
         public CustomerActiveRecord Customer { get; set; }
         public DateTime? RentalDate { get; set; }
         public DateTime? ReturnDate { get; set; }
-        bool Vraceno { get; set; }
+        public bool Vraceno { get; set; }
+
+        public override string ToString()
+        {
+            return ID.ToString() + "; " + Customer.Name + " " + Customer.Surname + "; " + RentalDate.ToString();
+        }
 
         public RentalActiveRecord(int _id, LibrarianActiveRecord _librarian, CustomerActiveRecord _customer, DateTime _rentalDate, DateTime? _returnDate, bool _vraceno)
         {
@@ -60,8 +65,16 @@ namespace DomainLayer.ActiveRecord
         public void Save()
         {
             var rentalGateWay = new RentalTDG();
-            int tmpId = rentalGateWay.Insert((int)this.Librarian.ID, (int)this.Customer.ID, RentalDate, ReturnDate, Vraceno);
-            ID = tmpId;
+            if (ID == null)
+            {
+                int tmpId = rentalGateWay.Insert((int)this.Librarian.ID, (int)this.Customer.ID, RentalDate, ReturnDate, Vraceno);
+                ID = tmpId;
+            }
+
+            else
+            {
+                rentalGateWay.Update(ID, Librarian.ID, Customer.ID, RentalDate, ReturnDate, Vraceno);
+            }
         }
 
         public static RentalActiveRecord MapResultsetToObject(DataRow dr)
@@ -73,7 +86,10 @@ namespace DomainLayer.ActiveRecord
             NewRental.Librarian = LibrarianActiveRecord.MapResultsetToObject(librarianTemp.GetLibrarianByID(Convert.ToInt32(dr.ItemArray[1].ToString())).Rows[0]);
             NewRental.Customer = CustomerActiveRecord.MapResultsetToObject(customerTemp.GetCustomerByID(Convert.ToInt32(dr.ItemArray[2].ToString())).Rows[0]);
             NewRental.RentalDate = Convert.ToDateTime(dr.ItemArray[3].ToString());
-            NewRental.ReturnDate = Convert.ToDateTime(dr.ItemArray[4].ToString());
+            if(dr.ItemArray[4] == DBNull.Value)
+                NewRental.ReturnDate = null;
+            else
+                NewRental.ReturnDate = Convert.ToDateTime(dr.ItemArray[4].ToString());
             NewRental.Vraceno = Convert.ToBoolean(dr.ItemArray[5].ToString());
 
             return NewRental;

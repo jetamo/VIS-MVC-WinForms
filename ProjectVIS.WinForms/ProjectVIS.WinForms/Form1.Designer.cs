@@ -82,15 +82,17 @@
             this.b_returnBooks.TabIndex = 4;
             this.b_returnBooks.Text = "Vrátit knihy";
             this.b_returnBooks.UseVisualStyleBackColor = true;
+            this.b_returnBooks.Click += new System.EventHandler(this.b_returnBooks_Click);
             // 
             // b_sendEmails
             // 
-            this.b_sendEmails.Location = new System.Drawing.Point(237, 210);
+            this.b_sendEmails.Location = new System.Drawing.Point(237, 197);
             this.b_sendEmails.Name = "b_sendEmails";
-            this.b_sendEmails.Size = new System.Drawing.Size(136, 52);
+            this.b_sendEmails.Size = new System.Drawing.Size(136, 65);
             this.b_sendEmails.TabIndex = 5;
-            this.b_sendEmails.Text = "Zaslat email uživatelům";
+            this.b_sendEmails.Text = "Zaslat email uživatelům s aktivní výpůjčkou\r\n";
             this.b_sendEmails.UseVisualStyleBackColor = true;
+            this.b_sendEmails.Click += new System.EventHandler(this.b_sendEmails_Click);
             // 
             // Form1
             // 

@@ -25,7 +25,18 @@ namespace ProjectVIS.WinForms
 
         private void b_add_Click(object sender, EventArgs e)
         {
-            BookActiveRecord book = new BookActiveRecord((AuthorActiveRecord)cb_author.SelectedItem, tb_title.Text, tb_genre.Text);
+            int a;
+            if(!Int32.TryParse(tb_available.Text, out a))
+            {
+                MessageBox.Show("Číslo ve špatném formátu.");
+                return;
+            }
+            if(a < 0)
+            {
+                MessageBox.Show("Počet kusů skladem nesmí být menší než 0.");
+                return;
+            }
+            BookActiveRecord book = new BookActiveRecord((AuthorActiveRecord)cb_author.SelectedItem, tb_title.Text, tb_genre.Text, a);
             book.Save();
             f1.Show();
             this.Hide();

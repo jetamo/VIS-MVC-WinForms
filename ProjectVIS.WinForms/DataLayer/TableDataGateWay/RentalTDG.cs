@@ -87,6 +87,36 @@ namespace DataLayer.TableDataGateWay
             }
         }
 
+        public void Update(int? _id, int? _idLibrarian, int? _idCustomer, DateTime? _rentalDate, DateTime? _returnDate, bool _vraceno)
+        {
+            try
+            {
+                SqlConnectionStringBuilder builder = DBConnector.GetBuilder();
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                {
+                    connection.Open();
+                    StringBuilder sb = new StringBuilder();
+                    sb.Clear();
+                    sb.Append("UPDATE Vypujcka ");
+                    sb.Append("SET id_knihovnik = @p_id_knihovnik, id_zakaznik = @p_id_zakaznik, datum_zapujceni = @p_datum_zapujceni, datum_vraceni = @p_datum_vraceni, vraceno = @p_vraceno WHERE id_vypujcka = @p_id;");
+
+
+                    string sql = sb.ToString();
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@p_id_knihovnik", _idLibrarian);
+                        command.Parameters.AddWithValue("@p_id_zakaznik", _idCustomer);
+                        command.Parameters.AddWithValue("@p_datum_zapujceni", _rentalDate);
+                        command.Parameters.AddWithValue("@p_datum_vraceni", _returnDate);
+                        command.Parameters.AddWithValue("@p_vraceno", _vraceno);
+                        command.Parameters.AddWithValue("@p_id", _id);
+                        command.ExecuteScalar();
+                    }
+                }
+            }
+            catch { }
+        }
+
         public int Insert(int _id_knihovnik, int _id_zakaznik, DateTime? _datum_zapujceni, DateTime? _datum_vraceni, bool _vraceno)
         {
             try

@@ -46,6 +46,7 @@ namespace ProjectVIS.WinForms
             this.cb_kniha.Name = "cb_kniha";
             this.cb_kniha.Size = new System.Drawing.Size(149, 23);
             this.cb_kniha.TabIndex = 0;
+            this.cb_kniha.SelectedIndexChanged += new System.EventHandler(this.cb_kniha_SelectedIndexChanged);
             // 
             // cb_zakaznik
             // 

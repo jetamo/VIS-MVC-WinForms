@@ -52,3 +52,5 @@ C:\dev\volavka\ProjectVIS.WinForms\ProjectVIS.WinForms\obj\Debug\netcoreapp3.1\P
 C:\dev\volavka\ProjectVIS.WinForms\ProjectVIS.WinForms\obj\Debug\netcoreapp3.1\ProjectVIS.WinForms.genruntimeconfig.cache
 C:\dev\volavka\ProjectVIS.WinForms\ProjectVIS.WinForms\obj\Debug\netcoreapp3.1\ProjectVIS.WinForms.AddBook.resources
 C:\dev\volavka\ProjectVIS.WinForms\ProjectVIS.WinForms\obj\Debug\netcoreapp3.1\ProjectVIS.WinForms.AddRental.resources
+C:\dev\volavka\ProjectVIS.WinForms\ProjectVIS.WinForms\obj\Debug\netcoreapp3.1\ProjectVIS.WinForms.SendEmail.resources
+C:\dev\volavka\ProjectVIS.WinForms\ProjectVIS.WinForms\obj\Debug\netcoreapp3.1\ProjectVIS.WinForms.ReturnRental.resources

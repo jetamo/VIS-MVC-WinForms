@@ -36,6 +36,8 @@ namespace ProjectVIS.WinForms
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.b_add = new System.Windows.Forms.Button();
+            this.tb_available = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb_genre
@@ -89,7 +91,7 @@ namespace ProjectVIS.WinForms
             // 
             // b_add
             // 
-            this.b_add.Location = new System.Drawing.Point(305, 160);
+            this.b_add.Location = new System.Drawing.Point(333, 204);
             this.b_add.Name = "b_add";
             this.b_add.Size = new System.Drawing.Size(141, 52);
             this.b_add.TabIndex = 6;
@@ -97,11 +99,29 @@ namespace ProjectVIS.WinForms
             this.b_add.UseVisualStyleBackColor = true;
             this.b_add.Click += new System.EventHandler(this.b_add_Click);
             // 
+            // tb_available
+            // 
+            this.tb_available.Location = new System.Drawing.Point(100, 141);
+            this.tb_available.Name = "tb_available";
+            this.tb_available.Size = new System.Drawing.Size(198, 23);
+            this.tb_available.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 144);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 15);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Skladem";
+            // 
             // AddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 224);
+            this.ClientSize = new System.Drawing.Size(521, 285);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.tb_available);
             this.Controls.Add(this.b_add);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -125,5 +145,7 @@ namespace ProjectVIS.WinForms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button b_add;
+        private System.Windows.Forms.TextBox tb_available;
+        private System.Windows.Forms.Label label4;
     }
 }

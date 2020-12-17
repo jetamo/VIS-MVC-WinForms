@@ -69,7 +69,7 @@ namespace DataLayer.TableDataGateWay
                 {
                     connection.Open();
 
-                    string sql = "SELECT TOP 1 k.id_knihaVevypujcce FROM id_knihaVevypujcce k ORDER BY k.id_knihaVevypujcce DESC";
+                    string sql = "SELECT TOP 1 k.id_knihaVeVypujcce FROM knihaVeVypujcce k ORDER BY k.id_knihaVeVypujcce DESC";
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
@@ -82,7 +82,7 @@ namespace DataLayer.TableDataGateWay
                 return Convert.ToInt32(dt.Rows[0][0].ToString());
             }
 
-            catch
+            catch (Exception e)
             {
                 return -1;
             }
@@ -98,7 +98,7 @@ namespace DataLayer.TableDataGateWay
                     connection.Open();
                     StringBuilder sb = new StringBuilder();
                     sb.Clear();
-                    sb.Append("INSERT INTO KnihaVevypujcce ");
+                    sb.Append("INSERT INTO KnihaVeVypujcce ");
                     sb.Append("VALUES (@p_id_kniha, @p_id_vypujcka);");
 
 

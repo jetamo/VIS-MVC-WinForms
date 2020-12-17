@@ -45,5 +45,19 @@ namespace ProjectVIS.WinForms
             addRentalForm.Show();
             this.Hide();
         }
+
+        private void b_sendEmails_Click(object sender, EventArgs e)
+        {
+            SendEmail sendEmailForm = new SendEmail(this);
+            sendEmailForm.Show();
+            this.Hide();
+        }
+
+        private void b_returnBooks_Click(object sender, EventArgs e)
+        {
+            ReturnRental returnRentalForm = new ReturnRental(this);
+            returnRentalForm.Show();
+            this.Hide();
+        }
     }
 }
