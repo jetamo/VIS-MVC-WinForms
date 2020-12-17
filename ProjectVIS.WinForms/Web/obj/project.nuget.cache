@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "23xWV+K8kL9hRwpafpfkK7PXtpi3/jUKTfDHq39QBxdx7p09D8OnDS6nYQ2AOIDouSWoMvTN5DTBDBaI/p5N3w==",
+  "success": true,
+  "projectFilePath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\Web\\Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jetam\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\jetam\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}
