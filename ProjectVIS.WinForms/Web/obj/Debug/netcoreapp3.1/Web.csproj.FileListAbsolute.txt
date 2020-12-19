@@ -32,3 +32,16 @@ C:\dev\volavka\ProjectVIS.WinForms\Web\obj\Debug\netcoreapp3.1\Web.dll
 C:\dev\volavka\ProjectVIS.WinForms\Web\obj\Debug\netcoreapp3.1\Web.pdb
 C:\dev\volavka\ProjectVIS.WinForms\Web\obj\Debug\netcoreapp3.1\Web.genruntimeconfig.cache
 C:\dev\volavka\ProjectVIS.WinForms\Web\obj\Debug\netcoreapp3.1\Web.csproj.CopyComplete
+C:\dev\volavka\ProjectVIS.WinForms\Web\obj\Debug\netcoreapp3.1\Web.csprojAssemblyReference.cache
+C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\DomainLayer.dll
+C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\DomainLayer.pdb
+C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\dev\volavka\ProjectVIS.WinForms\Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\BookList.cshtml.g.cs
+C:\dev\volavka\ProjectVIS.WinForms\Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\RentalList.cshtml.g.cs

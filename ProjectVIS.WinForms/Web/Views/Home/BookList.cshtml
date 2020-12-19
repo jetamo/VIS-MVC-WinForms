@@ -1,0 +1,33 @@
+﻿@using DomainLayer.ActiveRecord 
+@{
+    ViewData["Title"] = "Knihovna";
+}
+
+
+<table border="1">
+    <tr>
+        <td><b>Nazev</b></td>
+        <td><b>Jmeno autora</b></td>
+        <td><b>Zanr</b></td>
+        <td><b>Skladem</b></td>
+        <td><b>Rezervovat</b></td>
+    </tr>
+    @foreach (BookActiveRecord book in ViewBag.Books)
+    {
+        <tr>
+            <td>@book.Title</td>
+            <td>@book.Author.Name @book.Author.Surname</td>
+            <td>@book.Genre</td>
+            <td>@book.Available</td>
+            @if (book.Available <= 0)
+            {
+                <td>NErezervovat</td>
+            }
+            else
+            {
+                <td>rezervovat</td>
+            }
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,39 @@
+﻿@using DomainLayer.ActiveRecord
+@using System.Collections.Generic
+@{
+    ViewData["Title"] = "Knihovna";
+}
+
+
+
+@foreach (KeyValuePair<RentalActiveRecord, List<BookActiveRecord>> rental in ViewBag.Rentals)
+{
+    <div>
+        <table border="1">
+            <tr>
+                <td><b>Datum vypujcky</b></td>
+            </tr>
+            <tr>
+                <td>@rental.Key.RentalDate</td>
+            </tr>
+            <tr>
+                <td><b>Nazev</b></td>
+                <td><b>Jmeno autora</b></td>
+                <td><b>Zanr</b></td>
+            </tr>
+            @foreach (BookActiveRecord book in rental.Value)
+            {
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@book.Author.Name @book.Author.Surname</td>
+                    <td>@book.Genre</td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    <br>
+    <br>
+}
+<a href="@Url.Action("Index", "Home")">Prodlouzit vypujcku</a>
+
