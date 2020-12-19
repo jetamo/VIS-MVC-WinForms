@@ -1,4 +1,5 @@
-﻿@using DomainLayer.ActiveRecord 
+﻿@using DomainLayer.ActiveRecord
+@using Web.Models
 @{
     ViewData["Title"] = "Knihovna";
 }
@@ -21,13 +22,24 @@
             <td>@book.Available</td>
             @if (book.Available <= 0)
             {
-                <td>NErezervovat</td>
+
             }
             else
             {
-                <td>rezervovat</td>
+                <td>
+                    <form action="@Url.Action("Book", "Home")" method="post">
+                        <input type="hidden" name="id" value="@book.ID" />
+                        <button type="submit">Rezervovat</button>
+                    </form>
+                </td>
             }
         </tr>
     }
 </table>
+<br>
+<br>
+
+<form action="@Url.Action("DownloadCSV", "Home")">
+    <button type="submit">Stahnout seznam v CSV</button>
+</form>
 

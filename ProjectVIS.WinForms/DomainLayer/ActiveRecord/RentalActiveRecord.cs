@@ -16,6 +16,7 @@ namespace DomainLayer.ActiveRecord
         public DateTime? RentalDate { get; set; }
         public DateTime? ReturnDate { get; set; }
         public bool Vraceno { get; set; }
+        public bool Extended { get; set; }
 
         public override string ToString()
         {
@@ -30,6 +31,7 @@ namespace DomainLayer.ActiveRecord
             RentalDate = _rentalDate;
             ReturnDate = _returnDate;
             Vraceno = _vraceno;
+            Extended = false;
         }
         public RentalActiveRecord(LibrarianActiveRecord _librarian, CustomerActiveRecord _customer, DateTime _rentalDate, DateTime? _returnDate, bool _vraceno)
         {
@@ -39,6 +41,7 @@ namespace DomainLayer.ActiveRecord
             RentalDate = _rentalDate;
             ReturnDate = _returnDate;
             Vraceno = _vraceno;
+            Extended = false;
         }
         public RentalActiveRecord()
         {
@@ -48,6 +51,7 @@ namespace DomainLayer.ActiveRecord
             RentalDate = null;
             ReturnDate = null;
             Vraceno = false;
+            Extended = false;
         }
 
         public static List<RentalActiveRecord> Find()
@@ -61,19 +65,30 @@ namespace DomainLayer.ActiveRecord
             
             return rentalsList;
         }
-        
+
+        public static RentalActiveRecord Find(int _id)
+        {
+            RentalActiveRecord rental = new RentalActiveRecord();
+
+            var rentalGateWay = new RentalTDG();
+            DataTable dt = rentalGateWay.GetRentalByID(_id);
+            rental = MapResultsetToObject(dt.Rows[0]);
+
+            return rental;
+        }
+
         public void Save()
         {
             var rentalGateWay = new RentalTDG();
             if (ID == null)
             {
-                int tmpId = rentalGateWay.Insert((int)this.Librarian.ID, (int)this.Customer.ID, RentalDate, ReturnDate, Vraceno);
+                int tmpId = rentalGateWay.Insert((int)this.Librarian.ID, (int)this.Customer.ID, RentalDate, ReturnDate, Vraceno, Extended);
                 ID = tmpId;
             }
 
             else
             {
-                rentalGateWay.Update(ID, Librarian.ID, Customer.ID, RentalDate, ReturnDate, Vraceno);
+                rentalGateWay.Update(ID, Librarian.ID, Customer.ID, RentalDate, ReturnDate, Vraceno, Extended);
             }
         }
 
@@ -91,6 +106,7 @@ namespace DomainLayer.ActiveRecord
             else
                 NewRental.ReturnDate = Convert.ToDateTime(dr.ItemArray[4].ToString());
             NewRental.Vraceno = Convert.ToBoolean(dr.ItemArray[5].ToString());
+            NewRental.Extended = Convert.ToBoolean(dr.ItemArray[6].ToString());
 
             return NewRental;
         }

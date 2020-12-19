@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Text;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -57,6 +58,42 @@ namespace Web.Controllers
             }
             ViewBag.Rentals = rentalDictionary;
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Extend(ExtendForm form)
+        {
+            RentalActiveRecord rental = RentalActiveRecord.Find(form.id);
+            rental.Extended = true;
+            rental.Save();
+            return RedirectToAction("RentalList", "Home");
+        }
+
+        [HttpPost]
+        public IActionResult Book(ExtendForm form)
+        {
+            BookActiveRecord book = BookActiveRecord.Find(form.id);
+            book.Available -= 1;
+            book.Save();
+            return RedirectToAction("BookList", "Home");
+        }
+
+
+        public FileContentResult DownloadCSV()
+        {
+            List<BookActiveRecord> books = BookActiveRecord.Find();
+            StringBuilder builder = new StringBuilder();
+            builder.AppendLine("Nazev;Autor;Zanr;Skladem");
+            foreach(BookActiveRecord book in books)
+            {
+                builder.AppendLine();
+                builder.Append(book.Title + ";");
+                builder.Append(book.Author.Name + " " + book.Author.Surname + ";");
+                builder.Append(book.Genre + ";");
+                builder.Append(book.Available + ";");
+            }
+            string csv = builder.ToString();
+            return File(new System.Text.UTF32Encoding().GetBytes(csv), "text/csv", "Books.csv");
         }
 
 

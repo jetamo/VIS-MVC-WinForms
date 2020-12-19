@@ -87,7 +87,7 @@ namespace DataLayer.TableDataGateWay
             }
         }
 
-        public void Update(int? _id, int? _idLibrarian, int? _idCustomer, DateTime? _rentalDate, DateTime? _returnDate, bool _vraceno)
+        public void Update(int? _id, int? _idLibrarian, int? _idCustomer, DateTime? _rentalDate, DateTime? _returnDate, bool _vraceno, bool _prodlouzeno)
         {
             try
             {
@@ -98,7 +98,7 @@ namespace DataLayer.TableDataGateWay
                     StringBuilder sb = new StringBuilder();
                     sb.Clear();
                     sb.Append("UPDATE Vypujcka ");
-                    sb.Append("SET id_knihovnik = @p_id_knihovnik, id_zakaznik = @p_id_zakaznik, datum_zapujceni = @p_datum_zapujceni, datum_vraceni = @p_datum_vraceni, vraceno = @p_vraceno WHERE id_vypujcka = @p_id;");
+                    sb.Append("SET id_knihovnik = @p_id_knihovnik, id_zakaznik = @p_id_zakaznik, datum_zapujceni = @p_datum_zapujceni, datum_vraceni = @p_datum_vraceni, vraceno = @p_vraceno, prodlouzeno = @p_prodlouzeno WHERE id_vypujcka = @p_id;");
 
 
                     string sql = sb.ToString();
@@ -107,17 +107,21 @@ namespace DataLayer.TableDataGateWay
                         command.Parameters.AddWithValue("@p_id_knihovnik", _idLibrarian);
                         command.Parameters.AddWithValue("@p_id_zakaznik", _idCustomer);
                         command.Parameters.AddWithValue("@p_datum_zapujceni", _rentalDate);
-                        command.Parameters.AddWithValue("@p_datum_vraceni", _returnDate);
+                        if(_returnDate != null)
+                            command.Parameters.AddWithValue("@p_datum_vraceni", _returnDate);
+                        else
+                            command.Parameters.AddWithValue("@p_datum_vraceni", DBNull.Value);
                         command.Parameters.AddWithValue("@p_vraceno", _vraceno);
                         command.Parameters.AddWithValue("@p_id", _id);
+                        command.Parameters.AddWithValue("@p_prodlouzeno", _prodlouzeno);
                         command.ExecuteScalar();
                     }
                 }
             }
-            catch { }
+            catch(Exception ex) { }
         }
 
-        public int Insert(int _id_knihovnik, int _id_zakaznik, DateTime? _datum_zapujceni, DateTime? _datum_vraceni, bool _vraceno)
+        public int Insert(int _id_knihovnik, int _id_zakaznik, DateTime? _datum_zapujceni, DateTime? _datum_vraceni, bool _vraceno, bool _extended)
         {
             try
             {
@@ -128,7 +132,7 @@ namespace DataLayer.TableDataGateWay
                     StringBuilder sb = new StringBuilder();
                     sb.Clear();
                     sb.Append("INSERT INTO vypujcka ");
-                    sb.Append("VALUES (@p_id_knihovnik, @p_id_zakaznik, @p_datum_zapujceni, @p_datum_vraceni, @p_vraceno);");
+                    sb.Append("VALUES (@p_id_knihovnik, @p_id_zakaznik, @p_datum_zapujceni, @p_datum_vraceni, @p_vraceno, @p_prodlouzeno);");
 
 
                     string sql = sb.ToString();
@@ -142,6 +146,7 @@ namespace DataLayer.TableDataGateWay
                         else
                             command.Parameters.AddWithValue("@p_datum_vraceni", _datum_vraceni);
                         command.Parameters.AddWithValue("@p_vraceno", _vraceno);
+                        command.Parameters.AddWithValue("@p_prodlouzeno", _extended);
                         command.ExecuteScalar();
                     }
                 }
