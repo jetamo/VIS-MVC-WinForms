@@ -146,14 +146,14 @@
         }
       }
     },
-    "C:\\dev\\volavka\\ProjectVIS.WinForms\\Web\\Web.csproj": {
+    "C:\\dev\\volavka\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\ProjectVIS.WinForms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\volavka\\ProjectVIS.WinForms\\Web\\Web.csproj",
-        "projectName": "Web",
-        "projectPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\Web\\Web.csproj",
+        "projectUniqueName": "C:\\dev\\volavka\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\ProjectVIS.WinForms.csproj",
+        "projectName": "ProjectVIS.WinForms",
+        "projectPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\ProjectVIS.WinForms.csproj",
         "packagesPath": "C:\\Users\\jetam\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\Web\\obj\\",
+        "outputPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -209,11 +209,91 @@
             }
           ],
           "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev\\volavka\\ProjectVIS.WinForms\\Web\\Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\volavka\\ProjectVIS.WinForms\\Web\\Web.csproj",
+        "projectName": "Web",
+        "projectPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\Web\\Web.csproj",
+        "packagesPath": "C:\\Users\\jetam\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jetam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\dev\\volavka\\ProjectVIS.WinForms\\DomainLayer\\DomainLayer.csproj": {
+                "projectPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\DomainLayer\\DomainLayer.csproj"
+              },
+              "C:\\dev\\volavka\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\ProjectVIS.WinForms.csproj": {
+                "projectPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\ProjectVIS.WinForms.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
+          "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"

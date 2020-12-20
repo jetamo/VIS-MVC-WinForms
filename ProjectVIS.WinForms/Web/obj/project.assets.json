@@ -157,6 +157,22 @@
         "runtime": {
           "bin/placeholder/DomainLayer.dll": {}
         }
+      },
+      "ProjectVIS.WinForms/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "DomainLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProjectVIS.WinForms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjectVIS.WinForms.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
       }
     }
   },
@@ -480,11 +496,17 @@
       "type": "project",
       "path": "../DomainLayer/DomainLayer.csproj",
       "msbuildProject": "../DomainLayer/DomainLayer.csproj"
+    },
+    "ProjectVIS.WinForms/1.0.0": {
+      "type": "project",
+      "path": "../ProjectVIS.WinForms/ProjectVIS.WinForms.csproj",
+      "msbuildProject": "../ProjectVIS.WinForms/ProjectVIS.WinForms.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "DomainLayer >= 1.0.0"
+      "DomainLayer >= 1.0.0",
+      "ProjectVIS.WinForms >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -520,6 +542,9 @@
           "projectReferences": {
             "C:\\dev\\volavka\\ProjectVIS.WinForms\\DomainLayer\\DomainLayer.csproj": {
               "projectPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\DomainLayer\\DomainLayer.csproj"
+            },
+            "C:\\dev\\volavka\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\ProjectVIS.WinForms.csproj": {
+              "projectPath": "C:\\dev\\volavka\\ProjectVIS.WinForms\\ProjectVIS.WinForms\\ProjectVIS.WinForms.csproj"
             }
           }
         }
@@ -559,6 +584,9 @@
           },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"

@@ -19,11 +19,11 @@
             <td>@rental.Key.RentalDate</td>
             @if (rental.Key.Extended)
             {
-            <td>@(((DateTime)(rental.Key.RentalDate)).Add(new TimeSpan(30, 0, 0, 0)))</td>
+                <td>@(((DateTime)(rental.Key.RentalDate)).Add(new TimeSpan(60, 0, 0, 0)))</td>
             }
             else
             {
-                <td>@rental.Key.RentalDate</td>
+                <td>@(((DateTime)(rental.Key.RentalDate)).Add(new TimeSpan(30, 0, 0, 0)))</td>
             }
 
 

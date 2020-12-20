@@ -45,3 +45,6 @@ C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\DomainLayer.pdb
 C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\DataLayer.pdb
 C:\dev\volavka\ProjectVIS.WinForms\Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\BookList.cshtml.g.cs
 C:\dev\volavka\ProjectVIS.WinForms\Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\RentalList.cshtml.g.cs
+C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\ProjectVIS.WinForms.exe
+C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\ProjectVIS.WinForms.dll
+C:\dev\volavka\ProjectVIS.WinForms\Web\bin\Debug\netcoreapp3.1\ProjectVIS.WinForms.pdb
